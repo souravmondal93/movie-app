@@ -20,11 +20,9 @@
         return directive;
 
         /** @ngInject */
-        function MovieCardController($scope, $log, $window) {
+        function MovieCardController($scope, $window) {
 
             var vm = this;
-
-            $log.info($scope.movie);
 
             vm.movie = $scope.movie;
 

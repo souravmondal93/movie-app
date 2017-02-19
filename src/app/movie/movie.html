@@ -31,9 +31,18 @@
         </div>
 
         <div layout="row" class="md-padding" layout-padding layout-margin>
-            <div flex="50">
-                <movie-card movie="movie.movie"></movie-card>
+            <div layout="column" flex="50">
+                <movie-card movie="movie" ng-repeat="movie in movie.moviesList | limitTo: 10: movie.movieStartIndex" ng-if="$even"></movie-card>
             </div>
+            <div layout="column" flex="50">
+                <movie-card movie="movie" ng-repeat="movie in movie.moviesList | limitTo: 10: movie.movieStartIndex" ng-if="$odd"></movie-card>
+            </div>
+        </div>
+
+        <div layout="row" layout-align="center center">
+            <ul uib-pagination boundary-links="true" total-items="movie.totalMovies" ng-model="movie.currentPage"
+                force-ellipses="true" max-size="5" class="pagination" previous-text="&lsaquo;" next-text="&rsaquo;"
+                ng-change="movie.pageChange(page)" first-text="&laquo;" last-text="&raquo;"></ul>
         </div>
     </md-content>
 </div>
