@@ -13,6 +13,7 @@
         vm.totalMovies = 0;
         vm.movieStartIndex = 0;
         vm.searchText = '';
+        vm.loading = false;
 
         vm.pageChange = pageChange;
 
@@ -21,9 +22,11 @@
             vm.moviesList = Movies.getMovies();
             vm.totalMovies = vm.moviesList.length;
         } else {
+            vm.loading = true;
             Movies.getMoviesFromAPI()
                 .then(function (response) {
                     $log.info(response);
+                    vm.loading = false;
                     Movies.setMovies(response.data);
                     vm.moviesList = Movies.getMovies();
                     $log.info(vm.moviesList);
@@ -32,6 +35,7 @@
                     localStorage.setItem('movieList', angular.toJson(response.data));
                 }, function (error) {
                     $log.error(error);
+                    vm.loading = false;
                 });
         }
 
