@@ -1,7 +1,9 @@
-<md-card class="md-padding movie-card" ng-click="movieCard.openMovie(movieCard.movie.movie_imdb_link)">
+<md-card class="md-padding">
     <md-card-title>
         <md-card-title-text>
-            <span class="md-headline">{{movieCard.movie.movie_title}}</span>
+            <span class="md-headline movie-title" ng-click="movieCard.openMovie(movieCard.movie.movie_imdb_link)">
+                {{movieCard.movie.movie_title}}
+            </span>
             <span class="md-subhead">({{movieCard.movie.title_year}})</span>
             <span class="md-subhead movie-country">Country: {{movieCard.movie.country}}</span>
         </md-card-title-text>
