@@ -25,6 +25,10 @@
                 </md-card>
             </div>
 
+            <div layout="row" class="md-padding">
+
+            </div>
+
             <div layout="row" class="md-padding" layout-padding layout-margin>
                 <div layout="column" flex="50">
                     <movie-card movie="movie" ng-repeat="movie in movie.moviesList | filter:movie.searchText | limitTo: 10: movie.movieStartIndex" ng-if="$even"></movie-card>

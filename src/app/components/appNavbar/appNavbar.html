@@ -1,6 +1,23 @@
 <md-toolbar layout="row">
 
     <section flex layout="row" layout-align="center center">
+        <md-menu class="menu">
+            <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)" aria-label="Open main menu">
+                <i class="fa fa-bars"></i>
+            </md-button>
+            <md-menu-content>
+                <md-menu-item>
+                    <md-button>
+                        Search Movies
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        Movies Graph
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
         <div class="md-raised">Movie App</div>
     </section>
 

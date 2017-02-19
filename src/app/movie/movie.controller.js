@@ -14,6 +14,7 @@
         vm.movieStartIndex = 0;
         vm.searchText = '';
         vm.loading = false;
+        vm.showFilter = false;
 
         vm.pageChange = pageChange;
 

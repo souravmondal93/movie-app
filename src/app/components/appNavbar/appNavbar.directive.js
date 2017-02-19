@@ -11,7 +11,7 @@
             restrict: 'E',
             templateUrl: 'app/components/appNavbar/appNavbar.html',
             controller: AppNavbarController,
-            controllerAs: 'vm',
+            controllerAs: 'navbar',
             bindToController: true
         };
 
