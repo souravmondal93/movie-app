@@ -12,9 +12,20 @@
         vm.currentPage = 1;
         vm.totalMovies = 0;
         vm.movieStartIndex = 0;
-        vm.searchText = '';
+        vm.searchText = {};
         vm.loading = false;
         vm.showFilter = false;
+        vm.searchTypeSelected = 'movie_title';
+        vm.searchType = [
+            { value: '$', display: 'All' },
+            { value: 'movie_title', display: 'Movie Name' },
+            { value: 'director_name', display: 'Director Name' },
+            { value: 'genres', display: 'Genres Name' },
+            { value: 'language', display: 'Language' },
+            { value: 'country', display: 'Country Name' },
+            { value: 'content_rating', display: 'Content Rating' },
+            { value: 'plot_keywords', display: 'Keywords' }
+        ];
 
         vm.pageChange = pageChange;
 

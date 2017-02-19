@@ -17,7 +17,13 @@
                 <md-card flex="90">
                     <md-input-container class="md-padding">
                         <label>Search Movie by Name</label>
-                        <input ng-model="movie.searchText.movie_title">
+                        <input ng-model="movie.searchText[movie.searchTypeSelected]">
+                    </md-input-container>
+                    <md-input-container class="md-padding">
+                        <label>Search By</label>
+                        <md-select ng-model="movie.searchTypeSelected">
+                            <md-option ng-repeat="search in movie.searchType" value="{{search.value}}">{{search.display}}</md-option>
+                        </md-select>
                     </md-input-container>
                 </md-card>
                 <md-card flex layout-align="center center" class="movie-filter">
