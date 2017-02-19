@@ -28,6 +28,9 @@
 
             vm.openMovie = openMovie;
 
+            /*
+            *   Function to open movie url
+            */
             function openMovie(url) {
                 $window.open(url);
             }

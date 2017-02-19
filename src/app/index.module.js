@@ -12,8 +12,7 @@
             'ui.router',
             'ngMaterial',
             'toastr',
-            'ui.bootstrap',
-            'bw.paging'
+            'ui.bootstrap'
         ]);
 
 })();

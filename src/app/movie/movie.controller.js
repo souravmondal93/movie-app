@@ -29,6 +29,9 @@
 
         vm.pageChange = pageChange;
 
+        /*
+        * To load content by http request if not already present else fetch from localStorage
+        */
         if(localStorage.getItem('stored') === true) {
             Movies.setMovies(angular.fromJson(localStorage.getItem('movieList')));
             vm.moviesList = Movies.getMovies();
@@ -51,6 +54,9 @@
                 });
         }
 
+        /*
+        * Fucntion for pagination
+        */
         function pageChange() {
             vm.movieStartIndex = (vm.currentPage - 1) * 10;
         }
