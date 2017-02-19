@@ -1,0 +1,62 @@
+<md-card class="md-padding movie-card" ng-click="movieCard.openMovie(movieCard.movie.movie_imdb_link)">
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{movieCard.movie.movie_title}}</span>
+            <span class="md-subhead">({{movieCard.movie.title_year}})</span>
+            <span class="md-subhead movie-country">Country: {{movieCard.movie.country}}</span>
+        </md-card-title-text>
+        <!--<md-card-title-media>-->
+        <!--<img ng-src="../../../assets/images/short-film.jpg" class="movie-image">-->
+        <!--</md-card-title-media>-->
+    </md-card-title>
+    <md-card-content layout="row">
+        <div flex="30">
+            <img ng-src="../../../assets/images/short-film.jpg" class="movie-image">
+        </div>
+        <div flex="70" class="movie-text">
+            <div layout="row">
+                <div flex="25">
+                    <span>Language</span>
+                </div>
+                <div flex="10">:</div>
+                <div flex="65">{{movieCard.movie.language}}</div>
+            </div>
+            <div layout="row" class="margin-top-3">
+                <div flex="25">
+                    <span>Director</span>
+                </div>
+                <div flex="10">:</div>
+                <div flex="65">{{movieCard.movie.director_name}}</div>
+            </div>
+            <div layout="row" class="margin-top-3">
+                <div flex="25">
+                    <span>Actors</span>
+                </div>
+                <div flex="10">:</div>
+                <div flex="65">{{movieCard.movie.actor_1_name}}, {{movieCard.movie.actor_2_name}}</div>
+            </div>
+            <div layout="row" class="margin-top-3">
+                <div flex="25">
+                    <span>Content</span>
+                </div>
+                <div flex="10">:</div>
+                <div flex="65">{{movieCard.movie.content_rating}}</div>
+            </div>
+            <div layout="row" class="margin-top-3">
+                <div flex="25">
+                    <span>Keywords</span>
+                </div>
+                <div flex="10">:</div>
+                <div flex="65" class="movie-keyword">{{movieCard.movie.plot_keywords | keyword}}</div>
+            </div>
+        </div>
+    </md-card-content>
+    <md-card-actions layout="row" class="movie-card-bottom">
+        <div layout="column" layout-align="center start">
+            <div>Genres: {{movieCard.movie.genres | genre}}</div>
+        </div>
+        <div layout="column" layout-align="center end" class="movie-currency">
+            <div>Budget: {{movieCard.movie.budget | currency:"USD ":0}}</div>
+        </div>
+    </md-card-actions>
+</md-card>

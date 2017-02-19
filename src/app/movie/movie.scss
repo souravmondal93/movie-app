@@ -1,0 +1,38 @@
+.movie-card {
+    cursor: pointer;
+    outline: 0;
+}
+
+.movie-image {
+    height: 150px;
+    width: 150px;
+    background-color: white;
+}
+
+.movie-country {
+    color: #000000;
+    font-size: 11px;
+    float: right;
+    margin-top: 10px;
+    opacity: 0.54;
+}
+
+.movie-text {
+    font-size: 12px;
+    color: #646464;
+}
+
+.margin-top-3 {
+    margin-top: 3px;
+}
+
+.movie-card-bottom {
+    position: relative;
+    color: #a1a1a1;
+    font-size: 14px;
+}
+
+.movie-currency {
+    position: absolute;
+    right: 0;
+}
